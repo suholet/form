@@ -33,7 +33,7 @@
                 class="form__input"
                 type="text"
                 name="name"
-                pattern="[А-Я][а-яё]*(?:-[А-Я][а-яё]*)?"
+                pattern="^[А-Я][а-яё]*(?:-[А-Я][а-яё]*)?$"
                 placeholder="Имя"
                 minlength="2"
                 maxlength="20"
@@ -46,7 +46,7 @@
                 class="form__input"
                 type="email"
                 name="email"
-                pattern="[\w+\-]+@\w+\.[a-z]{2,}"
+                pattern="^[\w\-\.\+]+@[\w]+\.[\w\.]{2,}$"
                 placeholder="E-Mail"
                 required
               />
@@ -74,7 +74,7 @@
                 class="form__input"
                 type="url"
                 name="url"
-                pattern="^(http|https):\/\/(www\.)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\w*\.\w+\.\w+)(:\d{2,5})?(\/[A-Za-z\/\-0-9]*#?)?"
+                pattern="^https?:\/\/(www\.)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|[a-z\.\-]+)(:\d{2,5})?([A-Za-z\/\-0-9\#\.\=\_\&\?]*)?$"
                 placeholder="Ваш сайт"
                 required
               />
